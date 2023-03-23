@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed84c4d91482a5c508caaf50e843de58",
+    "content-hash": "214bda89d5a6a5c2d14d0223b841b82f",
     "packages": [
         {
             "name": "automattic/jetpack-autoloader",
@@ -44,23 +44,34 @@
         },
         {
             "name": "automattic/jetpack-constants",
-            "version": "v1.5.0",
+            "version": "v1.6.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-constants.git",
-                "reference": "9827a2f446b8c4faafaf1c740483031c073a381d"
+                "reference": "e5730da0adc94e8513539818b4a3cce10943bf20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-constants/zipball/9827a2f446b8c4faafaf1c740483031c073a381d",
-                "reference": "9827a2f446b8c4faafaf1c740483031c073a381d",
+                "url": "https://api.github.com/repos/Automattic/jetpack-constants/zipball/e5730da0adc94e8513539818b4a3cce10943bf20",
+                "reference": "e5730da0adc94e8513539818b4a3cce10943bf20",
                 "shasum": ""
             },
             "require-dev": {
-                "php-mock/php-mock": "^2.1",
-                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5"
+                "automattic/jetpack-changelogger": "^3.3.2",
+                "brain/monkey": "2.6.1",
+                "yoast/phpunit-polyfills": "1.0.4"
             },
-            "type": "library",
+            "type": "jetpack-library",
+            "extra": {
+                "autotagger": true,
+                "mirror-repo": "Automattic/jetpack-constants",
+                "changelogger": {
+                    "link-template": "https://github.com/Automattic/jetpack-constants/compare/v${old}...v${new}"
+                },
+                "branch-alias": {
+                    "dev-trunk": "1.6.x-dev"
+                }
+            },
             "autoload": {
                 "classmap": [
                     "src/"
@@ -71,7 +82,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "A wrapper for defining constants in a more testable way.",
-            "time": "2020-08-13T14:33:09+00:00"
+            "time": "2023-02-20T19:47:20+00:00"
         },
         {
             "name": "composer/installers",
@@ -579,12 +590,12 @@
                 }
             },
             "autoload": {
-                "classmap": [
-                    "includes/"
-                ],
                 "psr-4": {
                     "Automattic\\WooCommerce\\Admin\\": "src/"
-                }
+                },
+                "classmap": [
+                    "includes/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -592,6 +603,7 @@
             ],
             "description": "A modern, javascript-driven WooCommerce Admin experience.",
             "homepage": "https://github.com/woocommerce/woocommerce-admin",
+            "abandoned": true,
             "time": "2020-10-26T20:25:00+00:00"
         },
         {
